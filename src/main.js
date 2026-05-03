@@ -20,11 +20,11 @@ const setNavbar = () => {
   const navbar = document.getElementById('navbar')
 
   navbar.innerHTML = `
-    <a href="#home" id="home_btn">Inicio</a>
+    <a href="#home" id="home_btn">Home</a>
     <a href="#todo" id="all">Todo</a>
     <a href="#users" id="users_btn">Usuarios</a>
-    <a href="#posts" id="posts_btn">Publicaciones</a>
-    <a href="#about" id="about_btn">Acerca de</a>
+    <a href="#posts" id="posts_btn">Posts</a>
+    <a href="#about" id="about_btn">About</a>
   `
 
   document.getElementById('home_btn').addEventListener('click', () => {
