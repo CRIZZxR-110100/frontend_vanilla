@@ -1,7 +1,6 @@
 import './style.css'
 
-import { setPostPage } from './postsPage'
-import { getUserData } from './services/userServices'
+import { setAllPage } from './allPage'
+import { getPosts } from './services/postServices'
 
-setPostPage()
-getUserData(1).then(item => console.log(item))
+setAllPage()

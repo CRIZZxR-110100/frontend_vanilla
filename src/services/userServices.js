@@ -9,7 +9,7 @@ export function getUsers() {
     }); 
 }
 
-export function getUserData(id) {
+export function getUserData(id = 0) {
   const URL = `https://jsonplaceholder.typicode.com/users/${id}`;
   
   return fetch(URL)

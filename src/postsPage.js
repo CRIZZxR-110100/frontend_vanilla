@@ -1,28 +1,32 @@
-import { getPostData } from "./services/postServices";
-import { getUserData } from './services/userServices';
+import { getPosts } from "./services/postServices";
 
 export const setPostPage = (element = 'app') => {
-  app = document.getElementById(element);
+  const app = document.getElementById(element);
 
-  getPostData()
+  getPosts()
     .then(posts => {
-      let postsTable = posts.map( item => `
-        <tr>
-          <td>${item.id}</td>
-          <td>${item.title}</td>
-          <td>${item.body}</td>
-          <td>${item.userId}</td>
-        </tr>
-      `).join('')
+      let postsTable = posts.map( item => {
+        
+        return `
+          <tr>
+            <td>${item.id}</td>
+            <td>${item.title}</td>
+            <td>${item.body}</td>
+            <td>${item.user.name}</td>
+          </tr>
+        `}
+      ).join('')
 
       app.innerHTML = `
+        <h1 class="titles">Publicaciones</h1>
+
         <table>
-          <thead>
+          <thead class="titles">
             <tr>
               <th>ID</th>
               <th>Título</th>
               <th>Publicación</th>
-              <th>ID Usuario</th>
+              <th>Usuario</th>
             </tr>
           </thead>
           <tbody>
