@@ -5,7 +5,7 @@ export const setUsersPage = (element = 'app') => {
 
   getUsers()
     .then(users => {
-      let usersTable = users.map( item => {
+      let usersTable = users.map(item => {
         const adress = item.address
 
         return `<tr>
@@ -21,7 +21,7 @@ export const setUsersPage = (element = 'app') => {
       app.innerHTML = `
         <h1 class="titles">Usuarios</h1>
       
-        <table>
+        <table class="UserTable">
           <thead class="titles">
             <tr>
               <th>ID</th>

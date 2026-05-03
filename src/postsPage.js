@@ -5,8 +5,8 @@ export const setPostPage = (element = 'app') => {
 
   getPosts()
     .then(posts => {
-      let postsTable = posts.map( item => {
-        
+      let postsTable = posts.map(item => {
+
         return `
           <tr>
             <td>${item.id}</td>
@@ -20,7 +20,7 @@ export const setPostPage = (element = 'app') => {
       app.innerHTML = `
         <h1 class="titles">Publicaciones</h1>
 
-        <table>
+        <table class="PostTable">
           <thead class="titles">
             <tr>
               <th>ID</th>
